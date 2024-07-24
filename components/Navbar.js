@@ -32,6 +32,56 @@ function Navbar() {
 
         <Box sx={{ flexGrow: 1 }} />
 
+       
+
+        <Menu
+          id="menu-appbar"
+          anchorEl={anchorElNav}
+          keepMounted
+          open={Boolean(anchorElNav)}
+          onClose={handleCloseNavMenu}
+          sx={{
+            marginTop: '40px',
+            display: { xs: 'block', md: 'none' },
+          }}
+        >
+          {pages.map((page) => {
+            const path = `/${page.toLowerCase()}`;
+            const isActive = router.pathname === path;
+
+            return (
+              <Button
+                key={page}
+                component="a"
+                href={path}
+                sx={{
+                  my: 2,
+                  color: isActive ? '#1976D2' : '#2E2E2E',
+                  display: 'block',
+                  width: '100%',
+                  justifyContent: 'center',
+                }}
+              >
+                {page}
+              </Button>
+            );
+          })}
+        </Menu>
+
+        <Box sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end', alignItems: 'center' }}>
+          <IconButton
+            size="large"
+            aria-label="menu"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
+            color="inherit"
+            sx={{ marginRight: '0px' }}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Box>
+
         <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', flexGrow: 1 }}>
           {pages.map((page) => {
             const path = `/${page.toLowerCase()}`;
@@ -58,66 +108,20 @@ function Navbar() {
             );
           })}
         </Box>
-
         <Button
           sx={{
-            display: { xs: 'inline-flex', md: 'inline-flex' },
-            marginRight: 7,
-            fontWeight:700
+            display: 'inline-flex',
+            marginRight: { xs: 2, md: 7 },
+            fontWeight: 700,
+            '@media (max-width: 600px)': {
+              marginLeft: "3%"
+            }
           }}
           variant="outlined"
           startIcon={<ExitToAppIcon />}
         >
           Sign In
         </Button>
-
-        <Box sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
-          <IconButton
-            size="large"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleOpenNavMenu}
-            color="inherit"
-            sx={{ marginRight: '0px' }}
-          >
-            <MenuIcon />
-          </IconButton>
-
-          <Menu
-            id="menu-appbar"
-            anchorEl={anchorElNav}
-            keepMounted
-            open={Boolean(anchorElNav)}
-            onClose={handleCloseNavMenu}
-            sx={{
-              marginTop: '40px',
-              display: { xs: 'block', md: 'none' },
-            }}
-          >
-            {pages.map((page) => {
-              const path = `/${page.toLowerCase()}`;
-              const isActive = router.pathname === path;
-
-              return (
-                <Button
-                  key={page}
-                  component="a"
-                  href={path}
-                  sx={{
-                    my: 2,
-                    color: isActive ? '#1976D2' : '#2E2E2E',
-                    display: 'block',
-                    width: '100%',
-                    justifyContent: 'center',
-                  }}
-                >
-                  {page}
-                </Button>
-              );
-            })}
-          </Menu>
-        </Box>
       </Toolbar>
     </Container>
   );
