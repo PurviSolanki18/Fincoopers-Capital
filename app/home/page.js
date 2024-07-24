@@ -47,6 +47,30 @@ const HomePage = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const items = [
+    { title: "Home Loan", image: "path/to/image1.jpg" },
+    { title: "Personal Loan", image: "path/to/image2.jpg" },
+    { title: "Wheeler Loan", image: "path/to/image1.jpg" },
+    { title: "Farm Equipment Loan", image: "path/to/image1.jpg" },
+    { title: "Micro Loan", image: "path/to/image1.jpg" },
+  ];
+  
+  const gridStyle = {
+    width: "219px",
+    height: "280px",
+    backgroundColor: "#0087C017",
+    border: "1px solid #0087C017", // Adding border to visualize the grid
+    borderRadius: "50%", // Make the border radius 50% to create an elliptical shape
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+  };
+
+  const textStyles = {
+    fontSize: "1.2rem",
+    fontWeight: "bold",
+  };
   const gridContainerStyle = {
     background: `url('../assets/circle.png')`,
     backgroundSize: 'cover',
@@ -305,7 +329,26 @@ const HomePage = () => {
           </Button>
         </Grid>
       </Grid>
+        
+      <Grid>
+        <Grid>
+        <Typography sx={{ fontSize: "35px", fontStyle: "Poppins", fontWeight: 500, color: "#494949",lineHeight:"50px" }}>Our Offerings</Typography>
+        <Divider sx={{ width: "165px", height: "7px", backgroundColor: "#0087C0", marginLeft: 4 }} />
 
+        <Grid>
+        <Grid container spacing={2}>
+      {items.map((_, index) => (
+        <Grid item key={index}>
+          <div style={gridStyle}>
+            <Typography style={textStyles}>{_.title}</Typography>
+            <img src={_.image}/>
+          </div>
+        </Grid>
+      ))}
+    </Grid>
+        </Grid>
+        </Grid>
+      </Grid>
       </Grid>
     </div>
   );
