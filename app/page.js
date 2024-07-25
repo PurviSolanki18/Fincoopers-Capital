@@ -1,6 +1,6 @@
 
 import Home from '../app/home/page'
-import './global.css'
+import './globals.css'
 export default function HomePage() {
   return (
   <>
