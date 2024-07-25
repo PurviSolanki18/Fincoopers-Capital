@@ -168,10 +168,10 @@ const HomePage = () => {
 
   const monthlyInterestRate = 0.01;
 
-
   const monthlyInterestFactor = Math.pow(1 + monthlyInterestRate, loanDuration);
   const emi = (loanAmount * monthlyInterestRate * monthlyInterestFactor) / (monthlyInterestFactor - 1);
-  const totalPayable = loanAmount + monthlyInterestFactor;
+  const totalPayable = loanAmount * monthlyInterestFactor;
+
   const handleLoanAmountChange = (event, newValue) => {
     const value = parseInt(event.target.value, 10);
     if (!isNaN(value)) {
@@ -431,17 +431,13 @@ const HomePage = () => {
         </Grid>
 
         <Grid container
-          // spacing={2}
           sx={{
-            // display: 'flex',
-            // flexDirection: 'row',
             alignItems: 'center',
             paddingTop: '5%',
             paddingBottom: '5%',
             backgroundImage: `url('../assets/bg.png')`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'bottom',
-            // backgroundSize: 'contain',
             width: "100%"
           }}>
           <Grid sx={{ paddingLeft: "15%" }}>
