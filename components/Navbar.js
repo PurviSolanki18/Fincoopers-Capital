@@ -28,11 +28,9 @@ function Navbar() {
   return (
     <Container maxWidth="xl" style={{ overflowX: 'hidden' }}>
       <Toolbar disableGutters>
-        <img src="/assets/logo.png" alt="logo" style={{ width: '150px', marginLeft: '5%' }} />
+        <img src="/assets/logo.svg" alt="logo" style={{ width: '200px', marginLeft: '5%' }} />
 
         <Box sx={{ flexGrow: 1 }} />
-
-       
 
         <Menu
           id="menu-appbar"
@@ -58,7 +56,7 @@ function Navbar() {
                   my: 2,
                   color: isActive ? '#1976D2' : '#2E2E2E',
                   display: 'block',
-                  width: '100%',
+                  width: 'auto',
                   justifyContent: 'center',
                 }}
               >
@@ -82,24 +80,24 @@ function Navbar() {
           </IconButton>
         </Box>
 
-        <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', flexGrow: 1 }}>
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', flexGrow: 1 ,width:"100%"}}>
           {pages.map((page) => {
             const path = `/${page.toLowerCase()}`;
             const isActive = router.pathname === path;
 
-            return (
+            return ( 
               <Button
                 key={page}
                 component="a"
                 href={path}
                 sx={{
-                  my: 2,
+                  my: 1,
                   color: isActive ? '#1976D2' : '#2E2E2E',
                   fontStyle: 'Poppins',
-                  fontSize: '16px',
+                  fontSize: '0.875rem',
                   fontWeight: isActive ? 600 : 300,
                   display: 'block',
-                  mx: 2,
+                  mx: 1,
                   textUnderlineOffset: '4px',
                 }}
               >
@@ -113,6 +111,7 @@ function Navbar() {
             display: 'inline-flex',
             marginRight: { xs: 2, md: 7 },
             fontWeight: 700,
+            width:"200px",
             '@media (max-width: 600px)': {
               marginLeft: "3%"
             }

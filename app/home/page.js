@@ -13,7 +13,7 @@ import Tab from '@mui/material/Tab';
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Slider from '@mui/material/Slider';
-
+import Footer from '../../components/Footer'
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -402,7 +402,7 @@ const HomePage = () => {
                 <Tab sx={{ fontFamily: "Poppins", fontWeight: 500, fontSize: { xs: "14px", md: "20px" }, lineHeight: { xs: "30px", md: "50px" } }} label="Unsecured/Personal Loan" {...a11yProps(2)} />
               </Tabs>
               <CustomTabPanel value={value} index={0}>
-                <div style={{ display: 'flex' ,width:"85%"}}>
+                <div style={{ display: 'flex', width: "85%" }}>
                   <img src='../assets/image 5.png' alt='watch' style={{ marginRight: '10px', maxWidth: '37px', height: '37px' }} />
                   <Typography variant="body1" sx={{ color: "#2E2E2E", flexGrow: 1, fontFamily: "Poppins", fontSize: { xs: '12px', md: '14px' }, fontWeight: 300, lineHeight: "22px" }}>Micro Loans Against Property are provided to customers who don't have any documented income. The loan amount ranges from ₹3,00,000 to ₹15,00,000 and are secured against the property, which is offered as collateral.</Typography>
                 </div>
@@ -414,19 +414,7 @@ const HomePage = () => {
                 Personal loan Content
               </CustomTabPanel>
             </Box>
-            <Button
-              sx={{
-                marginTop: { xs: "4%", md: "6%" },
-                fontWeight: 500,
-                fontSize: { xs: "10px", md: "14px" },
-                lineHeight: "24px",
-                fontFamily: "Poppins",
-                width: "170px"
-              }}
-              variant="outlined"
-            >
-              Check Eligibility
-            </Button>
+          
           </Grid>
         </Grid>
 
@@ -555,8 +543,24 @@ const HomePage = () => {
                 </CardActions>
               </Card>
             </Grid>
+
           </Grid>
+
+
         </Grid>
+
+        {/* <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center" }}>
+          <Grid item xs={12} md={6}>
+            <img src='../assets/image 16.png' alt="homecom" style={{ width: '100%', height: 'auto' }} />
+          </Grid>
+          <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '35px' }, fontWeight: 500, lineHeight: "50px",color:"#494949" }}>Our Mission</Typography>
+            <Divider sx={{ width: "155px", height: "6px", backgroundColor: "#0087C0" }} />
+            <Typography>With a long-standing problem of lack of access to credit for the rural population, we have created a market place where NBFCs and Rural customers can connect with each other.</Typography>
+            <Typography>We use technology to help ensure transparency and accountability. The platform is designed with the objective of providing a solution for the rural sector by giving them access to loan and system process with ease.</Typography>
+          </Grid>
+        </Grid> */}
+        <Footer/>
       </Grid>
     </div>
   );
