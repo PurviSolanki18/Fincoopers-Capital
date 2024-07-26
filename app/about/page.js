@@ -253,22 +253,45 @@ const HomePage = () => {
           </Grid>
 
           </Grid>
-            <Typography sx={{color:"#F25353",fontWeight:500,fontSize:"35px",fontFamily:"Poppins"}}>Integrity.<span style={{color:"#494949",fontWeight:500,fontSize:"35px",fontFamily:"Poppins"}}> Innovation. Excellence 
-            in</span><span style={{color:"#0087C0",fontWeight:500,fontSize:"35px",fontFamily:"Poppins"}}> Financial Services.</span></Typography>
-          <Grid>
+           
+         
 
+
+          <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center" ,px:"5%"}}>
+          <Grid item xs={12} md={6}>
+          <Typography sx={{color:"#F25353",fontWeight:500,fontSize:"35px",fontFamily:"Poppins"}}>Integrity.<span style={{color:"#494949",fontWeight:500,fontSize:"35px",fontFamily:"Poppins"}}> Innovation. Excellence 
+          in</span><span style={{color:"#0087C0",fontWeight:500,fontSize:"35px",fontFamily:"Poppins"}}> Financial Services.</span></Typography>
+          <Divider sx={{ width: "155px", height: "11px", backgroundColor: "#0087C0" }} />
+          </Grid>
+          <Grid item xs={12} md={6} sx={{ marginTop:"7%",display: 'flex', flexDirection: 'column',width:"400px" }}>  
+            <Divider sx={{height:"3px",backgroundColor:"#0087C0"}}/>
+            <Typography sx={{marginTop:"2%",fontFamily:"Poppins",fontSize:"14px",fontWeight:300,color:"#2E2E2E"}}>Our journey began with a vision to redefine the landscape of financial services by combining cutting-edge technology with personalized customer service. Since our inception, we have stayed true to our core values of integrity, transparency, and excellence, earning the trust and loyalty of our clients along the way.</Typography> 
+          </Grid>
+        </Grid>
+       
+        <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center",px:"5%" }}>
+          
+          <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>  
+            <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '35px' }, fontWeight: 500, lineHeight: "50px",color:"#494949" }}>Our Vision</Typography>
+            <Divider sx={{ width: "155px", height: "6px", backgroundColor: "#0087C0" }} />
+            <Typography sx={{marginTop:"4%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>Fincoopers India is working under BC Model and is focused on lending and providing financial services to rural customers across the country.</Typography><br></br>
+            <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>We offer competitive rates, friendly customer service, and have the knowledge to match your needs.</Typography><br></br>
+             <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>We're focused on rural India, so if you're looking for a lender who can provide the personal attention you need, then come to Fincoopers India!</Typography>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <img src='../assets/image 17.png' alt="homecom" style={{ width: '100%', height: 'auto' }} />
+          </Grid>
         </Grid>
 
-
-        <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center" }}>
+        <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center",px:"5%" }}>
           <Grid item xs={12} md={6}>
             <img src='../assets/image 16.png' alt="homecom" style={{ width: '100%', height: 'auto' }} />
           </Grid>
-          <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>  
             <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '35px' }, fontWeight: 500, lineHeight: "50px",color:"#494949" }}>Our Mission</Typography>
             <Divider sx={{ width: "155px", height: "6px", backgroundColor: "#0087C0" }} />
-            <Typography>With a long-standing problem of lack of access to credit for the rural population, we have created a market place where NBFCs and Rural customers can connect with each other.</Typography>
-            <Typography>We use technology to help ensure transparency and accountability. The platform is designed with the objective of providing a solution for the rural sector by giving them access to loan and system process with ease.</Typography>
+            <Typography sx={{marginTop:"4%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>With a long-standing problem of lack of access to credit for the rural population, we have created a market place where NBFCs and Rural customers can connect with each other.</Typography><br></br>
+            <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>We use technology to help ensure transparency and accountability. The platform is designed with the objective of providing a solution for the rural sector by giving them access to loan and system process with ease.</Typography>
           </Grid>
         </Grid>
         <Footer/>
