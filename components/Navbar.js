@@ -28,7 +28,7 @@ function Navbar() {
   return (
     <Container maxWidth="xl" style={{ overflowX: 'hidden' }}>
       <Toolbar disableGutters>
-        <img src="/assets/logo.svg" alt="logo" style={{ width: '200px', marginLeft: '5%' }} />
+        <img src="/assets/logo.svg" alt="logo" style={{ width: '200px', marginLeft: '3%' }} />
 
         <Box sx={{ flexGrow: 1 }} />
 

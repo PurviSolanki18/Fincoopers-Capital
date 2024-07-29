@@ -14,6 +14,8 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Slider from '@mui/material/Slider';
 import Footer from '../../components/Footer'
+import TimeLine from '../../components/TimeLine'
+
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -161,35 +163,7 @@ const HomePage = () => {
       },
     },
   });
-
-
-  const [loanAmount, setLoanAmount] = React.useState(1000);
-  const [loanDuration, setLoanDuration] = React.useState(6);
-
-  const monthlyInterestRate = 0.01;
-
-  const monthlyInterestFactor = Math.pow(1 + monthlyInterestRate, loanDuration);
-  const emi = (loanAmount * monthlyInterestRate * monthlyInterestFactor) / (monthlyInterestFactor - 1);
-  const totalPayable = loanAmount * monthlyInterestFactor;
-
-  const handleLoanAmountChange = (event, newValue) => {
-    const value = parseInt(event.target.value, 10);
-    if (!isNaN(value)) {
-      setLoanAmount(value);
-    }
-  };
-
-  const handleLoanDurationChange = (event, newValue) => {
-    const value = parseInt(event.target.value, 10);
-    if (!isNaN(value)) {
-      setLoanDuration(value);
-    }
-  };
-
-  const handleCheckButton = () => {
-
-  };
-
+ 
   return (
     <div>
       <Header />
@@ -254,9 +228,6 @@ const HomePage = () => {
 
           </Grid>
            
-         
-
-
           <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center" ,px:"5%"}}>
           <Grid item xs={12} md={6}>
           <Typography sx={{color:"#F25353",fontWeight:500,fontSize:"35px",fontFamily:"Poppins"}}>Integrity.<span style={{color:"#494949",fontWeight:500,fontSize:"35px",fontFamily:"Poppins"}}> Innovation. Excellence 
@@ -294,6 +265,10 @@ const HomePage = () => {
             <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>We use technology to help ensure transparency and accountability. The platform is designed with the objective of providing a solution for the rural sector by giving them access to loan and system process with ease.</Typography>
           </Grid>
         </Grid>
+        <Grid>
+        <TimeLine/>
+        </Grid>
+
         <Footer/>
       </Grid>
     </div>

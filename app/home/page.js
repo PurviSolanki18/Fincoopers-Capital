@@ -14,6 +14,8 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Slider from '@mui/material/Slider';
 import Footer from '../../components/Footer'
+import Carousel from '@/components/Carousel'
+
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -251,7 +253,7 @@ const HomePage = () => {
             </Grid>
           </Grid>
         </Grid>
-
+        </Grid>
 
         <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center", paddingTop: "9%", paddingBottom: "5%" }}>
           <Grid item xs={12} md={6}>
@@ -560,8 +562,10 @@ const HomePage = () => {
             <Typography>We use technology to help ensure transparency and accountability. The platform is designed with the objective of providing a solution for the rural sector by giving them access to loan and system process with ease.</Typography>
           </Grid>
         </Grid> */}
+
+<Carousel/>
         <Footer/>
-      </Grid>
+      
     </div>
   );
 }

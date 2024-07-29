@@ -20,37 +20,37 @@ const Header = () => {
         <Grid container justifyContent="space-between" alignItems="center">
           {/* Left side grid */}
           <Grid item>
-  <Grid container spacing={1} alignItems="center" sx={{
-    marginLeft: { xs: 0, sm: 0, md: 7 },
-    alignItems: { md: "center" },
-    flexDirection: { xs: "row", md: "row" }
-  }} >
-    <Grid item>
-      <Button sx={{ display: 'flex', alignItems: 'center', color: 'black' }}>
-        <TranslateOutlinedIcon sx={{ marginRight: 1, height: "16.17px", width: { xs: "15px", sm: "15px", md: "17.22px" }, }} />
-        <Typography variant="body2" sx={{ fontStyle: "Poppins", color: "#2E2E2E", fontSize: "11px", fontWeight: 300, lineHeight: "24px" }}>EN</Typography>
-      </Button>
-    </Grid>
-    <Grid item>
-      <WatchLaterOutlinedIcon sx={{ width: "20px", height: "20px" }} />
-    </Grid>
-    <Grid item>
-      <Typography sx={{ fontStyle: "Poppins", color: "#2E2E2E", fontSize: "11px", fontWeight: 300, lineHeight: "24px" }} variant="body2" >Mon-Fri 10:00 AM to 08:00 PM</Typography>
-    </Grid>
-    <Grid item>
-      <Grid container spacing={1} alignItems="center" sx={{
-        flexDirection: { xs: "row", md: "row" }
-      }}>
-        <Grid item>
-          <CallOutlinedIcon sx={{ width: "16.25px", height: "15.42px" }} />
-        </Grid>
-        <Grid item>
-          <Typography sx={{ fontStyle: "Poppins", color: "#2E2E2E", fontSize: "11px", fontWeight: 300, lineHeight: "24px" }} variant="body2">+91 9876543210</Typography>
-        </Grid>
-      </Grid>
-    </Grid>
-  </Grid>
-</Grid>
+            <Grid container spacing={1} alignItems="center" sx={{
+              marginLeft: { xs: 0, sm: 0, md: 4 },
+              alignItems: { md: "center" },
+              flexDirection: { xs: "row", md: "row" }
+            }} >
+              <Grid item>
+                <Button sx={{ display: 'flex', alignItems: 'center', color: 'black' }}>
+                  <TranslateOutlinedIcon sx={{ marginRight: 1, height: "16.17px", width: { xs: "15px", sm: "15px", md: "17.22px" }, }} />
+                  <Typography variant="body2" sx={{ fontStyle: "Poppins", color: "#2E2E2E", fontSize: "11px", fontWeight: 300, lineHeight: "24px" }}>EN</Typography>
+                </Button>
+              </Grid>
+              <Grid item>
+                <WatchLaterOutlinedIcon sx={{ width: "20px", height: "20px" }} />
+              </Grid>
+              <Grid item>
+                <Typography sx={{ fontStyle: "Poppins", color: "#2E2E2E", fontSize: "11px", fontWeight: 300, lineHeight: "24px" }} variant="body2" >Mon-Fri 10:00 AM to 08:00 PM</Typography>
+              </Grid>
+              <Grid item>
+                <Grid container spacing={1} alignItems="center" sx={{
+                  flexDirection: { xs: "row", md: "row" }
+                }}>
+                  <Grid item>
+                    <CallOutlinedIcon sx={{ width: "16.25px", height: "15.42px" }} />
+                  </Grid>
+                  <Grid item>
+                    <Typography sx={{ fontStyle: "Poppins", color: "#2E2E2E", fontSize: "11px", fontWeight: 300, lineHeight: "24px" }} variant="body2">+91 9876543210</Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
 
           {/* Right side grid */}
           <Grid item >
