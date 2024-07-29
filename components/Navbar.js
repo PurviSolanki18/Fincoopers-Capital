@@ -11,7 +11,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { useRouter } from 'next/navigation';
 
-const pages = ['Home', 'About', 'Product', 'Our Partner', 'Teams', 'Career', 'Connect'];
+const pages = ['Home', 'About', 'Product', 'Partners', 'Teams', 'Career', 'Connect'];
 
 function Navbar() {
   const router = useRouter();
