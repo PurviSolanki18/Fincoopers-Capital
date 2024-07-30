@@ -133,12 +133,12 @@ const HomePage = () => {
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column'}}>  
             <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '35px' }, fontWeight: 500, lineHeight: "50px",color:"#494949" }}>Why Choose 
-            <span style={{color:"#0087C0"}}> Fincoopers Capital?</span></Typography>
+            <span style={{color:"#0087C0"}}> Fincoopers  Capital?</span></Typography>
            
-            <Typography sx={{marginTop:"4%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Tailored Solutions:</span> We understand that every financial need is unique. Our range of loan products is designed to cater to diverse requirements with customized solutions.</Typography><br></br>
-            <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Quick and Easy Process:</span> Simplified application procedures and fast approvals mean you get the funds you need when you need them.</Typography><br></br>
-            <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Competitive Rates:</span> Benefit from attractive interest rates and flexible repayment terms that suit your budget.</Typography><br></br>
-            <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Expert Support:</span> Our dedicated team of financial experts is here to guide you through every step of the process, ensuring a smooth and informed experience.</Typography>
+            <Typography sx={{width:"98%",marginTop:"4%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '16px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Tailored Solutions:</span> We understand that every financial need is unique. Our range of loan products is designed to cater to diverse requirements with customized solutions.</Typography><br></br>
+            <Typography sx={{width:"98%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '16px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Quick and Easy Process:</span> Simplified application procedures and fast approvals mean you get the funds you need when you need them.</Typography><br></br>
+            <Typography sx={{width:"98%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '16px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Expert Support:</span> Our dedicated team of financial experts is here to guide you through every step of the process, ensuring a smooth and informed experience.</Typography>
+            <Typography sx={{width:"98%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '16px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Competitive Rates:</span> Benefit from attractive interest rates and flexible repayment terms that suit your budget.</Typography><br></br>
           </Grid>
         
         </Grid>
@@ -151,12 +151,12 @@ const HomePage = () => {
         </Grid>
         {cardData.map((card, index) => (
          <Grid xs={12} sm={4} key={index} padding="3%">
-         <Card item elevation={0} sx={{ maxWidth: 345, margin: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+         <Card item elevation={0} sx={{textAlign:"start", maxWidth: 345, margin: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
            <CardContent sx={{ flexGrow: 1 , height:"220px" }}>
              <Typography variant="h6" sx={{marginBottom:"2%",color:"#494949", fontSize:"24px", fontWeight:500, fontFamily:"Poppins"}}>
                {card.title}
              </Typography>
-             <Typography variant="body2" sx={{color:"#494949", fontSize:"14px", fontWeight:300, fontFamily:"Poppins", lineHeight:"22px"}}>
+             <Typography variant="body2" sx={{width:"85%",color:"#494949", fontSize:"14px", fontWeight:300, fontFamily:"Poppins", lineHeight:"22px"}}>
                {card.description}
              </Typography>
            </CardContent>

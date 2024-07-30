@@ -52,11 +52,11 @@ const HomePage = () => {
     setValue(newValue);
   };
   const items = [
-    { title: "Home Loan", image: "../assets/image 11.png" },
-    { title: "Personal Loan", image: "../assets/image 12.png" },
-    { title: "Wheeler Loan", image: "../assets/image 13.png" },
+    { title: "Micro Lap", image: "../assets/image 11.png" },
+    { title: "Lap", image: "../assets/image 12.png" },
+    { title: "Two Wheeler Loan", image: "../assets/image 13.png" },
     { title: "Farm Equipment Loan", image: "../assets/image 14.png" },
-    { title: "Micro Loan", image: "../assets/image 15.png" },
+    { title: "Unsecured/ Personal Loan", image: "../assets/image 15.png" },
   ];
 
   const gridStyle = {
@@ -80,13 +80,13 @@ const HomePage = () => {
   };
 
   const textStyles = {
-    paddingTop: "5%",
-    fontSize: "24px",
+    paddingTop: "7%",
+    fontSize: "20px",
     fontWeight: 400,
     color: "#494949",
     fontFamily: "Poppins",
-    lineHeight: "30px",
-    width: "70%"
+    lineHeight: "24px",
+    width: "75%"
   };
 
   const gridContainerStyle = {
@@ -226,7 +226,7 @@ const HomePage = () => {
           {/* Content Grid */}
           <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
             <Grid item xs={12} md={6}>
-              <Box sx={{ marginLeft: '8%' }}>
+              <Box sx={{ marginLeft: '11%' }}>
                 <Typography variant="h4" sx={{ color: "#494949", fontFamily: "Poppins", fontSize: { xs: '1.5rem', md: '2.5rem' }, color: 'black', fontWeight: 700, marginBottom: '1rem' }}>
                   Empowering Your Financial
                   Future with Every<Typewriter text=" Click! " delay={150} infinite />
@@ -249,13 +249,260 @@ const HomePage = () => {
               </Box>
             </Grid>
             <Grid item xs={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <img src='../assets/2ndimgs.gif' alt='handShake' style={{ maxWidth: '100%', height: 'auto' }} />
+              <img src='../assets/farmer.jpeg' alt='handShake' style={{ maxWidth: '90%', height: 'auto' }} />
             </Grid>
           </Grid>
         </Grid>
+      </Grid>
+
+      <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center", paddingTop: "9%", paddingBottom: "5%" }}>
+        <Grid item xs={12} md={6}>
+          <Card
+            sx={{
+              minWidth: 275,
+              borderRadius: '11px',
+              borderColor: '#0087C0',
+              boxShadow: `2px 2px 2px 2px rgba(0, 135, 192, 0.5)`,
+              width: { xs: '200px', md: '545px' },
+              marginLeft: { xs: '6%', md: '10%' },
+              marginBottom: { xs: '20px', md: 0 },
+            }}
+          >
+            <CardContent
+              sx={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'space-between',
+                width: '100%',
+                padding: '16px',
+              }}
+            >
+              {statistics.map((statistic, index) => (
+                <Grid key={index} style={{ flex: '0 0 48%', margin: '1%' }}>
+                  <Typography
+                    sx={{
+                      marginLeft: "10%",
+                      fontFamily: "Poppins",
+                      fontSize: "35px",
+                      lineHeight: "50px",
+                      fontWeight: 500,
+                      color: "#494949",
+                      '@media (max-width: 600px)': {
+                        fontSize: "18px",
+                        lineHeight: "35px",
+                        marginTop: "7%"
+                      }
+                    }}
+                  >
+                    {statistic.number}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      marginLeft: "10%",
+                      fontFamily: "Poppins",
+                      fontSize: "16px",
+                      lineHeight: "22px",
+                      fontWeight: 500,
+                      color: "#494949",
+                      '@media (max-width: 600px)': {
+                        fontSize: "12px",
+                        lineHeight: "15px",
+
+                      }
+                    }}
+                  >
+                    {statistic.title}
+                  </Typography>
+                </Grid>
+              ))}
+
+            </CardContent>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Grid item marginLeft="15%">
+            <Typography sx={{ fontSize: { md: "35px", xs: '20px' }, fontFamily: "Poppins", fontWeight: 700, color: "#494949", marginLeft: 5 }}>We have</Typography>
+
+            <Typography sx={{
+              backgroundImage: `url('../assets/Ellipse.png')`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'contain',
+              fontSize: { md: "35px", xs: '20px' },
+              fontFamily: "Poppins",
+              fontWeight: 700,
+              color: "#0087C0",
+              paddingLeft: "12px"
+            }}>Grown businesses</Typography>
+
+            <Typography sx={{ fontSize: { md: "35px", xs: '20px' }, fontFamily: "Poppins", fontWeight: 700, color: "#494949", marginLeft: 5 }}>and still counting</Typography>
+            <Divider sx={{ width: "95px", height: "7px", backgroundColor: "#0087C0", marginLeft: 2 }} />
+          </Grid>
+        </Grid>
+      </Grid>
+
+      <Grid container spacing={3} sx={gridContainerStyle} >
+        <Grid item xs={12} md={4} sx={{ height: { xs: 'auto', md: '310px' } }}>
+          <Grid style={gridItemStyle}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img src='../assets/image 4.png' alt='watch' style={{ marginRight: '10px', maxWidth: '50px', height: 'auto' }} />
+              <Typography variant="body1" sx={{ flexGrow: 1, fontFamily: "Poppins", fontSize: { xs: '18px', md: '24px' }, fontWeight: 500, lineHeight: { xs: '30px', md: '50px' } }}>On Time<br /><span style={{ color: "#0087C0" }}>Service</span></Typography>
+            </div>
+            <Typography variant="body2" sx={{ marginLeft: "15%", width: "72%", fontFamily: "Poppins", fontSize: { xs: '14px', md: '16px' }, fontWeight: 300, lineHeight: "22px" }}>
+              Transforming distribution and marketing with key capabilities in customer insight and analytics.
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Grid style={gridItemStyle}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img src='../assets/image 3.png' alt='watch' style={{ marginRight: '10px', maxWidth: '50px', height: 'auto' }} />
+              <Typography variant="body1" sx={{ flexGrow: 1, fontFamily: "Poppins", fontSize: { xs: '18px', md: '24px' }, fontWeight: 500, lineHeight: { xs: '30px', md: '50px' } }}>A Team Of<br /><span style={{ color: "#0087C0" }}>Professionals.</span></Typography>
+            </div>
+            <Typography variant="body2" sx={{ marginLeft: "18%", width: "72%", fontFamily: "Poppins", fontSize: { xs: '14px', md: '16px' }, fontWeight: 300, lineHeight: "22px" }}>
+              Transforming distribution and marketing with key capabilities in customer insight and analytics.
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Grid style={gridItemStyle}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img src='../assets/image 2.png' alt='watch' style={{ marginRight: '10px', maxWidth: '50px', height: 'auto' }} />
+              <Typography variant="body1" sx={{ flexGrow: 1, fontFamily: "Poppins", fontSize: { xs: '18px', md: '24px' }, fontWeight: 500, lineHeight: { xs: '30px', md: '50px' } }}>Analyze Your<br /><span style={{ color: "#0087C0" }}>Business.</span></Typography>
+            </div>
+            <Typography variant="body2" sx={{ marginLeft: "15%", width: "72%", fontFamily: "Poppins", fontSize: { xs: '14px', md: '16px' }, fontWeight: 300, lineHeight: "22px" }}>
+              Transforming distribution and marketing with key capabilities in customer insight and analytics.
+            </Typography>
+          </Grid>
+        </Grid>
+      </Grid>
+
+      <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center", margin: { md: '3%' }, overflowX: 'hidden' }}>
+        <Grid item xs={12} md={4} sx={{ width: '100%' }}>
+          <img src='../assets/farmer2.jpeg' alt="homecom" style={{ width: '100%', height: 'auto', marginLeft: { md: '3%' } }} />
+        </Grid>
+        <Grid item xs={12} md={8} sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Typography sx={{
+            backgroundImage: `url('../assets/Ellipse.png')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+            fontSize: { xs: "25px", md: "35px" },
+            fontFamily: "Poppins",
+            lineHeight: { xs: "30px", md: "50px" },
+            fontWeight: 500,
+            color: "#494949",
+            paddingLeft: { xs: "8px", md: "12px" }
+          }}><span style={{ color: "#F25353" }}>Click</span> for Your</Typography>
+
+          <Typography sx={{ paddingLeft: { xs: "8px", md: "12px" }, fontSize: { xs: "25px", md: "35px" }, fontFamily: "Poppins", fontWeight: 500, color: "#494949", marginLeft: { xs: "8px", md: "2px" } }}>Financial Future</Typography>
+          <Divider sx={{ width: "95px", height: "7px", backgroundColor: "#0087C0", marginLeft: { xs: "8px", md: "12px" } }} />
+
+          <Box sx={{ width: '100%', marginTop: { xs: "3%", md: "5%" }, overflowX: 'hidden' }}>
+            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+              <Tab
+                sx={{ fontFamily: "Poppins", fontWeight: 500, fontSize: { xs: "10px", md: "16px" }, lineHeight: { xs: "30px", md: "50px" } }}
+                label="Micro Lap"
+                {...a11yProps(0)}
+              />
+              <Tab
+                sx={{ fontFamily: "Poppins", fontWeight: 500, fontSize: { xs: "10px", md: "16px" }, lineHeight: { xs: "30px", md: "50px" } }}
+                label="Lap"
+                {...a11yProps(1)}
+              />
+              <Tab
+                sx={{ fontFamily: "Poppins", fontWeight: 500, fontSize: { xs: "10px", md: "16px" }, lineHeight: { xs: "30px", md: "50px" } }}
+                label="Unsecured/Personal Loan"
+                {...a11yProps(2)}
+              />
+              <Tab
+                sx={{ fontFamily: "Poppins", fontWeight: 500, fontSize: { xs: "10px", md: "16px" }, lineHeight: { xs: "30px", md: "50px" } }}
+                label="Two Wheeler"
+                {...a11yProps(3)}
+              />
+            </Tabs>
+            <CustomTabPanel value={value} index={0}>
+              <Box sx={{ display: 'flex', width: "100%" }}>
+                <img
+                  src='../assets/image 5.png'
+                  alt='watch'
+                  style={{ marginRight: '10px', maxWidth: '37px', height: '37px' }}
+                />
+                <Typography
+                  variant="body1"
+                  sx={{ color: "#2E2E2E", flexGrow: 1, fontFamily: "Poppins", fontSize: { xs: '12px', md: '14px' }, fontWeight: 300, lineHeight: "22px" }}
+                >
+                  Micro Loans Against Property are provided to customers who don't have any documented income. The loan amount ranges from ₹3,00,000 to ₹15,00,000 and are secured against the property, which is offered as collateral.
+                </Typography>
+              </Box>
+            </CustomTabPanel>
+            <CustomTabPanel value={value} index={1}>
+              Lap Content
+            </CustomTabPanel>
+            <CustomTabPanel value={value} index={2}>
+              Personal loan Content
+            </CustomTabPanel>
+            <CustomTabPanel value={value} index={3}>
+              Two Wheeler Content
+            </CustomTabPanel>
+          </Box>
+        </Grid>
+      </Grid>
+
+
+      <Grid container
+        sx={{
+          alignItems: 'center',
+          paddingTop: '5%',
+          paddingBottom: '5%',
+          backgroundImage: `url('../assets/bg.png')`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'bottom',
+          width: "100%"
+        }}>
+        <Grid sx={{ paddingLeft: "15%" }}>
+          <Typography sx={{ textAlign: "center", fontSize: "35px", fontFamily: "Poppins", fontWeight: 500, color: "#494949", lineHeight: "50px" }}>Our Offerings</Typography>
+          <Divider sx={{ width: "165px", height: "7px", backgroundColor: "#0087C0", margin: "20px auto" }} />
+
+          <Grid >
+            <Grid container spacing={2}>
+              {items.map((item, index) => (
+                <Grid item key={index} >
+                  <div style={gridStyle}>
+                    <Typography style={textStyles}>{item.title}</Typography>
+                    <img src={item.image} style={imageStyle} alt={item.title} />
+                  </div>
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
         </Grid>
 
         <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center", paddingTop: "9%", paddingBottom: "5%" }}>
+
+          <Grid item xs={12} md={6} width="70%" sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Grid item marginLeft="15%" width="70%">
+
+              <Typography sx={{
+                backgroundImage: `url('../assets/Ellipse.png')`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'contain',
+                fontSize: { xs: "25px", md: "35px" },
+                fontFamily: "Poppins",
+                lineHeight: { xs: "30px", md: "50px" },
+                fontWeight: 500,
+                color: "#494949",
+                paddingLeft: { xs: "8px", md: "12px" }
+              }}>All about your </Typography>
+
+              <Typography sx={{ fontSize: "35px", fontFamily: "Poppins", fontWeight: 700, color: "#F25353", marginLeft: 2 }}>EMI</Typography>
+              <Divider sx={{ width: "184px", height: "7px", backgroundColor: "#0087C0", marginLeft: 2 }} />
+              <Grid sx={{ marginLeft: "4%" }}>
+                <Typography variant="body1" sx={{ marginTop: "7%", color: "#2E2E2E", flexGrow: 1, fontFamily: "Poppins", fontSize: { xs: '12px', md: '14px' }, fontWeight: 300, lineHeight: "22px" }}>Starting at 1% monthly reducing interest rate. Apply now to know your exact EMI & interest rate</Typography>
+              </Grid>
+
+            </Grid>
+          </Grid>
+
           <Grid item xs={12} md={6}>
             <Card
               sx={{
@@ -263,295 +510,65 @@ const HomePage = () => {
                 borderRadius: '11px',
                 borderColor: '#0087C0',
                 boxShadow: `2px 2px 2px 2px rgba(0, 135, 192, 0.5)`,
-                width: { xs: '100%', md: '545px' },
-                marginLeft: { xs: 0, md: '10%' },
+                width: {xs:"80%",md:"100%"},
+                maxWidth: '550px',
                 marginBottom: { xs: '20px', md: 0 },
+                padding: '20px',
+                marginLeft:{xs: '9%', md: 0}
               }}
             >
-              <CardContent
-                sx={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  justifyContent: 'space-between',
-                  width: '100%',
-                  padding: '16px',
-                }}
-              >
-                {statistics.map((statistic, index) => (
-                  <Grid key={index} style={{ flex: '0 0 48%', margin: '1%' }}>
-                    <Typography
-                      sx={{
-                        marginLeft: "10%",
-                        fontFamily: "Poppins",
-                        fontSize: "35px",
-                        lineHeight: "50px",
-                        fontWeight: 500,
-                        color: "#494949",
-                        '@media (max-width: 600px)': {
-                          fontSize: "22px",
-                          lineHeight: "35px",
-                          marginTop: "7%"
-                        }
-                      }}
-                    >
-                      {statistic.number}
+              <CardContent>
+                <Typography sx={{ color: '#494949', fontWeight: 400, fontSize: '24px', lineHeight: '30px', fontFamily: 'Poppins' }}>
+                  Required loan amount: ₹ {loanAmount}
+                </Typography>
+                <PrettoSlider
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  defaultValue={loanAmount}
+                  onChange={handleLoanAmountChange}
+                  min={1000}
+                  max={100000}
+                />
+                <Typography sx={{ color: '#494949', fontWeight: 400, fontSize: '24px', lineHeight: '30px', fontFamily: 'Poppins' }}>
+                  Required loan duration: {loanDuration} months
+                </Typography>
+                <PrettoSlider
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  defaultValue={loanDuration}
+                  onChange={handleLoanDurationChange}
+                  min={6}
+                  max={60}
+                />
+                <Grid container sx={{ marginTop: '20px' }}>
+                  <Grid item xs={12} md={6}>
+                    <Typography sx={{ color: '#494949', fontWeight: 300, fontSize: '18px', lineHeight: '30px', fontFamily: 'Poppins' }}>
+                      Total payable*:
                     </Typography>
-                    <Typography
-                      sx={{
-                        marginLeft: "10%",
-                        fontFamily: "Poppins",
-                        fontSize: "16px",
-                        lineHeight: "22px",
-                        fontWeight: 500,
-                        color: "#494949",
-                        '@media (max-width: 600px)': {
-                          fontSize: "12px",
-                          lineHeight: "15px",
-
-                        }
-                      }}
-                    >
-                      {statistic.title}
+                    <Typography sx={{ color: '#494949', fontWeight: 500, fontSize: '24px', lineHeight: '30px', fontFamily: 'Poppins' }}>
+                      ₹ {totalPayable.toFixed(2)}
                     </Typography>
                   </Grid>
-                ))}
-
+                  <Grid item xs={12} md={6}>
+                    <Typography sx={{ color: '#494949', fontWeight: 300, fontSize: '18px', lineHeight: '30px', fontFamily: 'Poppins' }}>
+                      EMI installment*:
+                    </Typography>
+                    <Typography sx={{ color: '#494949', fontWeight: 500, fontSize: '24px', lineHeight: '30px', fontFamily: 'Poppins' }}>
+                      ₹ {emi.toFixed(2)}
+                    </Typography>
+                  </Grid>
+                </Grid>
               </CardContent>
+              
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
-            <Grid item marginLeft="15%">
-              <Typography sx={{ fontSize: "35px", fontFamily: "Poppins", fontWeight: 700, color: "#494949", marginLeft: 5 }}>We have</Typography>
-
-              <Typography sx={{
-                backgroundImage: `url('../assets/Ellipse.png')`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'contain',
-                fontSize: "35px",
-                fontFamily: "Poppins",
-                fontWeight: 700,
-                color: "#0087C0",
-                paddingLeft: "12px"
-              }}>Grown businesses</Typography>
-
-              <Typography sx={{ fontSize: "35px", fontFamily: "Poppins", fontWeight: 700, color: "#494949", marginLeft: 5 }}>and still counting</Typography>
-              <Divider sx={{ width: "95px", height: "7px", backgroundColor: "#0087C0", marginLeft: 2 }} />
-            </Grid>
-          </Grid>
         </Grid>
 
-        <Grid container spacing={3} sx={gridContainerStyle} >
-          <Grid item xs={12} md={4} sx={{ height: { xs: 'auto', md: '310px' } }}>
-            <Grid style={gridItemStyle}>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
-                <img src='../assets/image 4.png' alt='watch' style={{ marginRight: '10px', maxWidth: '50px', height: 'auto' }} />
-                <Typography variant="body1" sx={{ flexGrow: 1, fontFamily: "Poppins", fontSize: { xs: '18px', md: '24px' }, fontWeight: 500, lineHeight: { xs: '30px', md: '50px' } }}>On Time<br /><span style={{ color: "#0087C0" }}>Service</span></Typography>
-              </div>
-              <Typography variant="body2" sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '16px' }, fontWeight: 300, lineHeight: "22px" }}>
-                Transforming distribution and marketing with key capabilities in customer insight and analytics.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Grid style={gridItemStyle}>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
-                <img src='../assets/image 3.png' alt='watch' style={{ marginRight: '10px', maxWidth: '50px', height: 'auto' }} />
-                <Typography variant="body1" sx={{ flexGrow: 1, fontFamily: "Poppins", fontSize: { xs: '18px', md: '24px' }, fontWeight: 500, lineHeight: { xs: '30px', md: '50px' } }}>A Team Of<br /><span style={{ color: "#0087C0" }}>Professionals.</span></Typography>
-              </div>
-              <Typography variant="body2" sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '16px' }, fontWeight: 300, lineHeight: "22px" }}>
-                Transforming distribution and marketing with key capabilities in customer insight and analytics.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Grid style={gridItemStyle}>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
-                <img src='../assets/image 2.png' alt='watch' style={{ marginRight: '10px', maxWidth: '50px', height: 'auto' }} />
-                <Typography variant="body1" sx={{ flexGrow: 1, fontFamily: "Poppins", fontSize: { xs: '18px', md: '24px' }, fontWeight: 500, lineHeight: { xs: '30px', md: '50px' } }}>Analyze Your<br /><span style={{ color: "#0087C0" }}>Business.</span></Typography>
-              </div>
-              <Typography variant="body2" sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '16px' }, fontWeight: 300, lineHeight: "22px" }}>
-                Transforming distribution and marketing with key capabilities in customer insight and analytics.
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
 
-        <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center" }}>
-          <Grid item xs={12} md={6}>
-            <img src='../assets/homecom.gif' alt="homecom" style={{ width: '100%', height: 'auto' }} />
-          </Grid>
-          <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
-            <Typography sx={{
-              backgroundImage: `url('../assets/Ellipse.png')`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'contain',
-              fontSize: { xs: "25px", md: "35px" },
-              fontFamily: "Poppins",
-              lineHeight: { xs: "30px", md: "50px" },
-              fontWeight: 500,
-              color: "#494949",
-              paddingLeft: { xs: "8px", md: "12px" }
-            }}><span style={{ color: "#F25353" }}>Click</span> for Your</Typography>
+      </Grid>
 
-            <Typography sx={{ fontSize: { xs: "25px", md: "35px" }, fontFamily: "Poppins", fontWeight: 500, color: "#494949", marginLeft: { xs: "8px", md: "2px" } }}>Financial Future</Typography>
-            <Divider sx={{ width: "95px", height: "7px", backgroundColor: "#0087C0", marginLeft: { xs: "8px", md: "2px" } }} />
-
-            <Box sx={{ width: '100%', marginTop: { xs: "3%", md: "5%" } }}>
-              <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                <Tab sx={{ fontFamily: "Poppins", fontWeight: 500, fontSize: { xs: "14px", md: "20px" }, lineHeight: { xs: "30px", md: "50px" } }} label="Micro Lap" {...a11yProps(0)} />
-                <Tab sx={{ fontFamily: "Poppins", fontWeight: 500, fontSize: { xs: "14px", md: "20px" }, lineHeight: { xs: "30px", md: "50px" } }} label="Lap" {...a11yProps(1)} />
-                <Tab sx={{ fontFamily: "Poppins", fontWeight: 500, fontSize: { xs: "14px", md: "20px" }, lineHeight: { xs: "30px", md: "50px" } }} label="Unsecured/Personal Loan" {...a11yProps(2)} />
-              </Tabs>
-              <CustomTabPanel value={value} index={0}>
-                <div style={{ display: 'flex', width: "85%" }}>
-                  <img src='../assets/image 5.png' alt='watch' style={{ marginRight: '10px', maxWidth: '37px', height: '37px' }} />
-                  <Typography variant="body1" sx={{ color: "#2E2E2E", flexGrow: 1, fontFamily: "Poppins", fontSize: { xs: '12px', md: '14px' }, fontWeight: 300, lineHeight: "22px" }}>Micro Loans Against Property are provided to customers who don't have any documented income. The loan amount ranges from ₹3,00,000 to ₹15,00,000 and are secured against the property, which is offered as collateral.</Typography>
-                </div>
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={1}>
-                Lap Content
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={2}>
-                Personal loan Content
-              </CustomTabPanel>
-            </Box>
-          
-          </Grid>
-        </Grid>
-
-        <Grid container
-          sx={{
-            alignItems: 'center',
-            paddingTop: '5%',
-            paddingBottom: '5%',
-            backgroundImage: `url('../assets/bg.png')`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'bottom',
-            width: "100%"
-          }}>
-          <Grid sx={{ paddingLeft: "15%" }}>
-            <Typography sx={{ textAlign: "center", fontSize: "35px", fontFamily: "Poppins", fontWeight: 500, color: "#494949", lineHeight: "50px" }}>Our Offerings</Typography>
-            <Divider sx={{ width: "165px", height: "7px", backgroundColor: "#0087C0", margin: "20px auto" }} />
-
-            <Grid >
-              <Grid container spacing={2}>
-                {items.map((item, index) => (
-                  <Grid item key={index} >
-                    <div style={gridStyle}>
-                      <Typography style={textStyles}>{item.title}</Typography>
-                      <img src={item.image} style={imageStyle} alt={item.title} />
-                    </div>
-                  </Grid>
-                ))}
-              </Grid>
-            </Grid>
-          </Grid>
-
-          <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center", paddingTop: "9%", paddingBottom: "5%" }}>
-
-            <Grid item xs={12} md={6} width="70%" sx={{ display: 'flex', flexDirection: 'column' }}>
-              <Grid item marginLeft="15%" width="70%">
-
-                <Typography sx={{
-                  backgroundImage: `url('../assets/Ellipse.png')`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: 'contain',
-                  fontSize: { xs: "25px", md: "35px" },
-                  fontFamily: "Poppins",
-                  lineHeight: { xs: "30px", md: "50px" },
-                  fontWeight: 500,
-                  color: "#494949",
-                  paddingLeft: { xs: "8px", md: "12px" }
-                }}>All about your </Typography>
-
-                <Typography sx={{ fontSize: "35px", fontFamily: "Poppins", fontWeight: 700, color: "#F25353", marginLeft: 2 }}>EMI</Typography>
-                <Divider sx={{ width: "184px", height: "7px", backgroundColor: "#0087C0", marginLeft: 2 }} />
-
-                <Typography variant="body1" sx={{ marginTop: "7%", color: "#2E2E2E", flexGrow: 1, fontFamily: "Poppins", fontSize: { xs: '12px', md: '14px' }, fontWeight: 300, lineHeight: "22px" }}>*Starting at 1% monthly reducing interest rate. Apply now to know your exact EMI & interest rate</Typography>
-              </Grid>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <Card
-                sx={{
-                  minWidth: 275,
-                  borderRadius: '11px',
-                  borderColor: '#0087C0',
-                  boxShadow: `2px 2px 2px 2px rgba(0, 135, 192, 0.5)`,
-                  width: '100%',
-                  maxWidth: '550px',
-                  marginBottom: { xs: '20px', md: 0 },
-                  padding: '20px',
-                }}
-              >
-                <CardContent>
-                  <Typography sx={{ color: '#494949', fontWeight: 400, fontSize: '24px', lineHeight: '30px', fontFamily: 'Poppins' }}>
-                    Required loan amount: ₹ {loanAmount}
-                  </Typography>
-                  <PrettoSlider
-                    valueLabelDisplay="auto"
-                    aria-label="pretto slider"
-                    defaultValue={loanAmount}
-                    onChange={handleLoanAmountChange}
-                    min={1000}
-                    max={100000}
-                  />
-                  <Typography sx={{ color: '#494949', fontWeight: 400, fontSize: '24px', lineHeight: '30px', fontFamily: 'Poppins' }}>
-                    Required loan duration: {loanDuration} months
-                  </Typography>
-                  <PrettoSlider
-                    valueLabelDisplay="auto"
-                    aria-label="pretto slider"
-                    defaultValue={loanDuration}
-                    onChange={handleLoanDurationChange}
-                    min={6}
-                    max={60}
-                  />
-                  <Grid container sx={{ marginTop: '20px' }}>
-                    <Grid item xs={12} md={6}>
-                      <Typography sx={{ color: '#494949', fontWeight: 300, fontSize: '18px', lineHeight: '30px', fontFamily: 'Poppins' }}>
-                        Total payable*:
-                      </Typography>
-                      <Typography sx={{ color: '#494949', fontWeight: 500, fontSize: '24px', lineHeight: '30px', fontFamily: 'Poppins' }}>
-                        ₹ {totalPayable.toFixed(2)}
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                      <Typography sx={{ color: '#494949', fontWeight: 300, fontSize: '18px', lineHeight: '30px', fontFamily: 'Poppins' }}>
-                        EMI installment*:
-                      </Typography>
-                      <Typography sx={{ color: '#494949', fontWeight: 500, fontSize: '24px', lineHeight: '30px', fontFamily: 'Poppins' }}>
-                        ₹ {emi.toFixed(2)}
-                      </Typography>
-                    </Grid>
-                  </Grid>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    onClick={handleCheckButton}
-                    sx={{
-                      marginTop: { xs: '4%', md: '6%' },
-                      fontWeight: 500,
-                      fontSize: { xs: '10px', md: '14px' },
-                      lineHeight: '24px',
-                      fontFamily: 'Poppins',
-                      width: '170px',
-                    }}
-                    variant="outlined"
-                  >
-                    Check
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-
-          </Grid>
-
-
-        </Grid>
-
-        {/* <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center" }}>
+      {/* <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center" }}>
           <Grid item xs={12} md={6}>
             <img src='../assets/image 16.png' alt="homecom" style={{ width: '100%', height: 'auto' }} />
           </Grid>
@@ -563,9 +580,9 @@ const HomePage = () => {
           </Grid>
         </Grid> */}
 
-<Carousel/>
-        <Footer/>
-      
+      <Carousel />
+      <Footer />
+
     </div>
   );
 }
