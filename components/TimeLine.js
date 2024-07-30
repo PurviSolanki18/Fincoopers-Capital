@@ -108,7 +108,7 @@ const TimelineComponent = () => (
     <Timeline>
       {events.map((event, index) => (
         <React.Fragment key={index}>
-          <Event style={{ left: `${index * 33}%` }} />
+          <Event style={{ left: `${index * 25}%` }} />
           <Box style={{ left: `${index * 25}%` }}>
             <Title>{event.title}</Title>
             <Description>{event.description}</Description>

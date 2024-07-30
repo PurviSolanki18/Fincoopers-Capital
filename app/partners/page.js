@@ -93,14 +93,14 @@ const HomePage = () => {
                         <Grid item xs={12} md={6}>
                             <Box sx={{ marginLeft: '8%' }}>
                                 <Typography variant="h4" sx={{ textDecoration: "underline", color: "#494949", fontFamily: "Poppins", fontSize: { xs: '1.5rem', md: '25px' }, fontWeight: 600, marginBottom: '1rem' }}>
-                                    Product
+                                Partners 
                                 </Typography>
                                 <Typography variant="h4" sx={{ color: "#494949", fontFamily: "Poppins", fontSize: { xs: '1.5rem', md: '35px' }, fontWeight: 600, marginBottom: '1rem' }}>
-                                    Empowering Your Dreams with
-                                    Tailored <span style={{ color: "#0087C0" }}>Financial Solutions</span>
+                                Grow your business as a 
+                                 <span style={{ color: "#0087C0" }}> Fincoopers Capital </span>partner
                                 </Typography>
                                 <Typography variant="body1" sx={{ fontFamily: "Poppins", color: '#2E2E2E', fontSize: { xs: '0.875rem', md: '14px' }, marginBottom: '1rem' }}>
-                                    At Fincoopers Capital, we offer tailored financial solutions to meet your needs, from business expansion and equipment acquisition to personal expense management, with a variety of flexible loan products.
+                                Let’s work together. Join our community of partners to better serve mutual customers, build a win-win-win situation, and grow your business.
                                 </Typography>
 
                                 <Button
