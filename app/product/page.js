@@ -8,11 +8,7 @@ import Typewriter from '@/components/TypeWriter';
 import { Typography, Button, Grid, Box, Divider, CardActions } from '@mui/material';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Slider from '@mui/material/Slider';
 import Footer from '../../components/Footer'
 import CardSlider from '@/components/CardSlider'
 
@@ -132,13 +128,13 @@ const HomePage = () => {
             <img src='../assets/image 30.png' alt="homecom" />
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column'}}>  
-            <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '35px' }, fontWeight: 500, lineHeight: "50px",color:"#494949" }}>Why Choose 
+            <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '24px', md: '35px' }, fontWeight: 500, lineHeight: "50px",color:"#494949" }}>Why Choose 
             <span style={{color:"#0087C0"}}> Fincoopers  Capital?</span></Typography>
            
-            <Typography sx={{width:"98%",marginTop:"4%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '16px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Tailored Solutions:</span> We understand that every financial need is unique. Our range of loan products is designed to cater to diverse requirements with customized solutions.</Typography><br></br>
-            <Typography sx={{width:"98%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '16px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Quick and Easy Process:</span> Simplified application procedures and fast approvals mean you get the funds you need when you need them.</Typography><br></br>
-            <Typography sx={{width:"98%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '16px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Expert Support:</span> Our dedicated team of financial experts is here to guide you through every step of the process, ensuring a smooth and informed experience.</Typography>
-            <Typography sx={{width:"98%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '16px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Competitive Rates:</span> Benefit from attractive interest rates and flexible repayment terms that suit your budget.</Typography><br></br>
+            <Typography sx={{width:"98%",marginTop:"4%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '14px', md: '16px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Tailored Solutions:</span> We understand that every financial need is unique. Our range of loan products is designed to cater to diverse requirements with customized solutions.</Typography><br></br>
+            <Typography sx={{width:"98%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '14px', md: '16px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Quick and Easy Process:</span> Simplified application procedures and fast approvals mean you get the funds you need when you need them.</Typography><br></br>
+            <Typography sx={{width:"98%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '14px', md: '16px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Expert Support:</span> Our dedicated team of financial experts is here to guide you through every step of the process, ensuring a smooth and informed experience.</Typography>
+            <Typography sx={{width:"98%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '14px', md: '16px' }, fontWeight: 300, lineHeight: "22px",}}><span style={{color:"#2E2E2E",fontWeight: 500,}}>Competitive Rates:</span> Benefit from attractive interest rates and flexible repayment terms that suit your budget.</Typography><br></br>
           </Grid>
         
         </Grid>

@@ -121,7 +121,7 @@ const HomePage = () => {
                         </Grid>
                     </Grid>
                     <Grid sx={{ marginTop: "5%" }}>
-                        <Typography sx={{ textAlign: 'center', fontSize: '35px', fontFamily: 'Poppins', fontWeight: 500, color: '#494949', lineHeight: '50px' }}>
+                        <Typography sx={{ textAlign: 'center', fontSize: {md:'35px',xs:"24px"},marginTop:{xs:5}, fontFamily: 'Poppins', fontWeight: 500, color: '#494949', lineHeight: '50px' }}>
                             Trusted by top-performing <br></br>
                             partnership teams
                         </Typography>
@@ -145,10 +145,10 @@ const HomePage = () => {
                         <img src='../assets/image 25.png' alt="homecom" />
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
-                        <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '35px' }, fontWeight: 500, lineHeight: "50px", color: "#494949" }}>Unlock Opportunities with
+                        <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '24px', md: '35px' }, fontWeight: 500, lineHeight: "50px", color: "#494949" }}>Unlock Opportunities with
                             <span style={{ color: "#0087C0" }}> Fincoopers  Capital?</span></Typography>
 
-                        <Typography sx={{ width: "98%", marginTop: "4%", color: "#2E2E2E", fontFamily: "Poppins", fontSize: { xs: '10px', md: '16px' }, fontWeight: 300, lineHeight: "22px", }}>At Fincoopers Capital, we’re dedicated to empowering mid-cap businesses in rural areas with the financial support they need to grow and thrive. Our unique approach to lending not only fuels the success of these businesses but also offers substantial benefits to our partners.</Typography><br></br>
+                        <Typography sx={{ width: "98%", marginTop: "4%", color: "#2E2E2E", fontFamily: "Poppins", fontSize: { xs: '14px', md: '16px' }, fontWeight: 300, lineHeight: "22px", }}>At Fincoopers Capital, we’re dedicated to empowering mid-cap businesses in rural areas with the financial support they need to grow and thrive. Our unique approach to lending not only fuels the success of these businesses but also offers substantial benefits to our partners.</Typography><br></br>
 
                     </Grid>
 
@@ -156,10 +156,10 @@ const HomePage = () => {
 
                 <Grid container justifyContent="center" alignItems="center" spacing={2} sx={{marginTop:{md:"5%"}}}>
                     <Grid item xs={12} md={8}>
-                        <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '24px' }, fontWeight: 500, lineHeight: "50px", color: "#494949", textAlign: 'center' }}>
+                        <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '20px', md: '24px' }, fontWeight: 500, lineHeight: "50px", color: "#494949", textAlign: 'center' }}>
                             <span style={{ color: "#0087C0" }}>BECOME A PARTNER</span>
                         </Typography>
-                        <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '24px' }, fontWeight: 500, lineHeight: "50px", color: "#494949", textAlign: 'center' }}>
+                        <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '20px', md: '24px' }, fontWeight: 500, lineHeight: "50px", color: "#494949", textAlign: 'center' }}>
                             Together we can go farther
                         </Typography>
 
@@ -178,13 +178,13 @@ const HomePage = () => {
                             }}
                         >
                             <CardContent sx={{ width: '100%' }}>
-                                <Typography>Company Name</Typography>
+                                <Typography sx={{color:"#494949",fontFamily:"Poppins",fontSize:"14px",fontWeight:500,marginTop:"3%",marginBottom:"2%"}}>Company Name</Typography>
                                 <TextField fullWidth id="outlined-basic" label="Company Name" variant="outlined" />
-                                <Typography>Authorized Name </Typography>
+                                <Typography sx={{color:"#494949",fontFamily:"Poppins",fontSize:"14px",fontWeight:500,marginTop:"3%",marginBottom:"2%"}}>Authorized Name </Typography>
                                 <TextField fullWidth id="outlined-basic" label="Authorized Name" variant="outlined" />
-                                <Typography>No. of Employee</Typography>
+                                <Typography sx={{color:"#494949",fontFamily:"Poppins",fontSize:"14px",fontWeight:500,marginTop:"3%",marginBottom:"2%"}}>No. of Employee</Typography>
                                 <TextField fullWidth id="outlined-basic" label="No. of Employee" variant="outlined" />
-                                <Typography>Why do you want to be our partner?</Typography>
+                                <Typography sx={{color:"#494949",fontFamily:"Poppins",fontSize:"14px",fontWeight:500,marginTop:"3%",marginBottom:"2%"}}>Why do you want to be our partner?</Typography>
                                 <TextField fullWidth id="outlined-basic" label="Partner" variant="outlined" />
                             </CardContent>
                             <CardActionArea sx={{ marginBottom: "3%" }}>

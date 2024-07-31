@@ -43,16 +43,17 @@ function Navbar() {
 
   return (
     <Container maxWidth="xl" style={{ overflowX: 'hidden' }}>
-      <Toolbar disableGutters>
+      <Toolbar disableGutters sx={{marginLeft: {xs:"0%",md:"3.5%"}}}>
         <img src="/assets/logo.svg" alt="logo" style={{ width: {xs:"50%",md:"200px"},height: 'auto', marginLeft: {xs:"0%",md:"3.5%"} }} />
 
         <Box sx={{ flexGrow: 1 }} />
 
-        <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'center' }}>
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'end' }}>
           <Tabs
             value={value}
             onChange={handleTabChange}
             sx={{ 
+              marginRight:"4%",
               '& .MuiTab-root': {
                 fontSize: '0.875rem',
                 fontWeight: 300,
@@ -78,6 +79,7 @@ function Navbar() {
               const path = `/${page.toLowerCase()}`;
               return (
                 <Tab
+               
                   key={page}
                   label={page}
                   value={path}
@@ -118,7 +120,7 @@ function Navbar() {
           })}
           {/* Sign In Button in Mobile Menu */}
           <MenuItem onClick={handleCloseNavMenu}>
-            <Button
+            {/* <Button
               sx={{
                 fontWeight: 700,
                 width: '100%', // Make button full width
@@ -127,12 +129,12 @@ function Navbar() {
               startIcon={<ExitToAppIcon />}
             >
               Sign In
-            </Button>
+            </Button> */}
           </MenuItem>
         </Menu>
 
         {/* Desktop View Sign In Button */}
-        <Button
+        {/* <Button
           sx={{
             display: { xs: 'none', md: 'inline-flex' },
             marginRight: { xs: 2, md: 7 },
@@ -143,7 +145,7 @@ function Navbar() {
           startIcon={<ExitToAppIcon />}
         >
           Sign In
-        </Button>
+        </Button> */}
       </Toolbar>
     </Container>
   );

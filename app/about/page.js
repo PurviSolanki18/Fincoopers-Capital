@@ -51,118 +51,7 @@ const HomePage = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const items = [
-    { title: "Home Loan", image: "../assets/image 11.png" },
-    { title: "Personal Loan", image: "../assets/image 12.png" },
-    { title: "Wheeler Loan", image: "../assets/image 13.png" },
-    { title: "Farm Equipment Loan", image: "../assets/image 14.png" },
-    { title: "Micro Loan", image: "../assets/image 15.png" },
-  ];
 
-  const gridStyle = {
-    width: "180px",
-    height: "220px",
-    backgroundColor: "#0087C017",
-    border: "1px solid #0087C017",
-    borderRadius: "50%",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "space-between",
-    textAlign: "center",
-    padding: "15px",
-    marginTop: "18%",
-  };
-  const imageStyle = {
-    width: "60%",
-    height: "auto",
-    marginTop: "10px",
-  };
-
-  const textStyles = {
-    paddingTop: "5%",
-    fontSize: "24px",
-    fontWeight: 400,
-    color: "#494949",
-    fontFamily: "Poppins",
-    lineHeight: "30px",
-    width: "70%"
-  };
-
-  const gridContainerStyle = {
-    background: `url('../assets/circle.png')`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',
-    padding: '70px',
-    flexGrow: 1,
-    height: 'auto',
-    paddingTop: "3%"
-  };
-
-  const gridItemStyle = {
-    backgroundColor: 'transparent',
-    padding: '20px',
-    borderRadius: '10px',
-  };
-  const statistics = [
-    {
-      number: "300,000+",
-      title: "Loans Disbursed"
-    },
-    {
-      number: "14,800+",
-      title: "Pincodes"
-    },
-    {
-      number: "19,000+ Cr",
-      title: "Amount Disbursed till date"
-    },
-    {
-      number: "4,100+",
-      title: "Cities & Towns"
-    }
-  ];
-
-  const PrettoSlider = styled(Slider)({
-    color: '#0087C0',
-    height: 8,
-    '& .MuiSlider-track': {
-      border: 'none',
-    },
-    '& .MuiSlider-thumb': {
-      height: 24,
-      width: 24,
-      backgroundColor: '#fff',
-      border: '2px solid currentColor',
-      '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
-        boxShadow: 'inherit',
-      },
-      '&::before': {
-        display: 'none',
-      },
-    },
-    '& .MuiSlider-valueLabel': {
-      lineHeight: 1.2,
-      fontSize: 12,
-      background: 'unset',
-      padding: 0,
-      width: 32,
-      height: 32,
-      borderRadius: '50% 50% 50% 0',
-      backgroundColor: '#0087C0',
-      transformOrigin: 'bottom left',
-      transform: 'translate(50%, -100%) rotate(-45deg) scale(0)',
-      '&::before': { display: 'none' },
-      '&.MuiSlider-valueLabelOpen': {
-        transform: 'translate(50%, -100%) rotate(-45deg) scale(1)',
-      },
-      '& > *': {
-        transform: 'rotate(45deg)',
-      },
-    },
-  });
  
   return (
     <div>
@@ -178,6 +67,7 @@ const HomePage = () => {
             py: 1,
             width: '100%',
             position: 'relative',
+            marginTop:{xs:"6%"}
           }}
         >
           {/* Background image */}
@@ -216,7 +106,9 @@ const HomePage = () => {
                   }}
                   variant="outlined"
                   startIcon={<ExitToAppIcon />}
+                  href='/connect'
                 >
+                  
                   Connect
                 </Button>
               </Box>
@@ -243,11 +135,11 @@ const HomePage = () => {
         <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: "center",px:"5%" }}>
           
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>  
-            <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '35px' }, fontWeight: 500, lineHeight: "50px",color:"#494949" }}>Our Vision</Typography>
+            <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '24px', md: '35px' }, fontWeight: 500, lineHeight: "50px",color:"#494949" }}>Our Vision</Typography>
             <Divider sx={{ width: "155px", height: "6px", backgroundColor: "#0087C0" }} />
-            <Typography sx={{marginTop:"4%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>Fincoopers India is working under BC Model and is focused on lending and providing financial services to rural customers across the country.</Typography><br></br>
-            <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>We offer competitive rates, friendly customer service, and have the knowledge to match your needs.</Typography><br></br>
-             <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>We're focused on rural India, so if you're looking for a lender who can provide the personal attention you need, then come to Fincoopers India!</Typography>
+            <Typography sx={{marginTop:"4%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '14px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>Fincoopers India is working under BC Model and is focused on lending and providing financial services to rural customers across the country.</Typography><br></br>
+            <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '14px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>We offer competitive rates, friendly customer service, and have the knowledge to match your needs.</Typography><br></br>
+             <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '14px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>We're focused on rural India, so if you're looking for a lender who can provide the personal attention you need, then come to Fincoopers India!</Typography>
           </Grid>
           <Grid item xs={12} md={6}>
             <img src='../assets/image 17.png' alt="homecom" style={{ width: '100%', height: 'auto' }} />
@@ -259,14 +151,14 @@ const HomePage = () => {
             <img src='../assets/image 16.png' alt="homecom" style={{ width: '100%', height: 'auto' }} />
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>  
-            <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '14px', md: '35px' }, fontWeight: 500, lineHeight: "50px",color:"#494949" }}>Our Mission</Typography>
+            <Typography sx={{ fontFamily: "Poppins", fontSize: { xs: '24px', md: '35px' }, fontWeight: 500, lineHeight: "50px",color:"#494949" }}>Our Mission</Typography>
             <Divider sx={{ width: "155px", height: "6px", backgroundColor: "#0087C0" }} />
-            <Typography sx={{marginTop:"4%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>With a long-standing problem of lack of access to credit for the rural population, we have created a market place where NBFCs and Rural customers can connect with each other.</Typography><br></br>
-            <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '10px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>We use technology to help ensure transparency and accountability. The platform is designed with the objective of providing a solution for the rural sector by giving them access to loan and system process with ease.</Typography>
+            <Typography sx={{marginTop:"4%",color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '14px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>With a long-standing problem of lack of access to credit for the rural population, we have created a market place where NBFCs and Rural customers can connect with each other.</Typography><br></br>
+            <Typography sx={{color:"#2E2E2E",fontFamily: "Poppins", fontSize: { xs: '14px', md: '14px' }, fontWeight: 300, lineHeight: "22px",}}>We use technology to help ensure transparency and accountability. The platform is designed with the objective of providing a solution for the rural sector by giving them access to loan and system process with ease.</Typography>
           </Grid>
         </Grid>
         <Grid>
-        <TimeLine/>
+        {/* <TimeLine/> */}
         </Grid>
 
         <Footer/>

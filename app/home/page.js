@@ -86,7 +86,7 @@ const HomePage = () => {
     color: "#494949",
     fontFamily: "Poppins",
     lineHeight: "24px",
-    width: "75%"
+    width: "75%",
   };
 
   const gridContainerStyle = {
@@ -226,7 +226,7 @@ const HomePage = () => {
           {/* Content Grid */}
           <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
             <Grid item xs={12} md={6}>
-              <Box sx={{ marginLeft: '11%' }}>
+              <Box sx={{ marginLeft: {md:'11%',xs:2} }}>
                 <Typography variant="h4" sx={{ color: "#494949", fontFamily: "Poppins", fontSize: { xs: '1.5rem', md: '2.5rem' }, color: 'black', fontWeight: 700, marginBottom: '1rem' }}>
                   Empowering Your Financial
                   Future with Every<Typewriter text=" Click! " delay={150} infinite />
@@ -243,6 +243,7 @@ const HomePage = () => {
                   }}
                   variant="outlined"
                   startIcon={<ExitToAppIcon />}
+                  href='/about'
                 >
                   Explore
                 </Button>
@@ -263,7 +264,7 @@ const HomePage = () => {
               borderRadius: '11px',
               borderColor: '#0087C0',
               boxShadow: `2px 2px 2px 2px rgba(0, 135, 192, 0.5)`,
-              width: { xs: '200px', md: '545px' },
+              width: { xs: '330px', md: '545px' },
               marginLeft: { xs: '6%', md: '10%' },
               marginBottom: { xs: '20px', md: 0 },
             }}
@@ -381,7 +382,7 @@ const HomePage = () => {
         <Grid item xs={12} md={4} sx={{ width: '100%' }}>
           <img src='../assets/farmer2.jpeg' alt="homecom" style={{ width: '100%', height: 'auto', marginLeft: { md: '3%' } }} />
         </Grid>
-        <Grid item xs={12} md={8} sx={{ display: 'flex', flexDirection: 'column' }}>
+        <Grid item xs={12} md={8} sx={{ display: 'flex', flexDirection: 'column',margin:{xs:"4%"} }}>
           <Typography sx={{
             backgroundImage: `url('../assets/Ellipse.png')`,
             backgroundRepeat: 'no-repeat',
@@ -466,7 +467,7 @@ const HomePage = () => {
           <Grid >
             <Grid container spacing={2}>
               {items.map((item, index) => (
-                <Grid item key={index} >
+                <Grid item key={index} sx={{marginLeft:{xs:"13%"}}}>
                   <div style={gridStyle}>
                     <Typography style={textStyles}>{item.title}</Typography>
                     <img src={item.image} style={imageStyle} alt={item.title} />

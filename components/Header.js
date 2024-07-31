@@ -12,27 +12,32 @@ import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 const Header = () => {
+  const theme = useTheme();
+  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'white', color: 'black' }}>
+    <AppBar position="static" sx={{ backgroundColor: 'white', color: 'black', overflowX: 'hidden' }}>
       <Container maxWidth="xl">
         <Grid container justifyContent="space-between" alignItems="center">
           {/* Left side grid */}
           <Grid item>
             <Grid container spacing={1} alignItems="center" sx={{
               marginLeft: { xs: 0, sm: 0, md: 4 },
-              alignItems: { md: "center" },
-              flexDirection: { xs: "row", md: "row" }
-            }} >
+              alignItems: { md: "center",xs:"start" },
+              flexDirection: { xs: "row", md: "row" },
+            
+            }}>
               <Grid item>
                 <Button sx={{ display: 'flex', alignItems: 'center', color: 'black' }}>
-                  <TranslateOutlinedIcon sx={{ marginRight: 1, height: "16.17px", width: { xs: "15px", sm: "15px", md: "17.22px" }, }} />
+                  <TranslateOutlinedIcon sx={{ marginRight: {md:1,xs:0.5}, height: "16.17px", width: { xs: "12px", sm: "15px", md: "17.22px" }, }} />
                   <Typography variant="body2" sx={{ fontStyle: "Poppins", color: "#2E2E2E", fontSize: "11px", fontWeight: 300, lineHeight: "24px" }}>EN</Typography>
                 </Button>
               </Grid>
               <Grid item>
-                <WatchLaterOutlinedIcon sx={{ width: "20px", height: "20px" }} />
+                <WatchLaterOutlinedIcon sx={{ width: {md:"20px",xs:"10px"}, height: "20px" }} />
               </Grid>
               <Grid item>
                 <Typography sx={{ fontStyle: "Poppins", color: "#2E2E2E", fontSize: "11px", fontWeight: 300, lineHeight: "24px" }} variant="body2" >Mon-Fri 10:00 AM to 08:00 PM</Typography>
@@ -59,7 +64,8 @@ const Header = () => {
               spacing={1}
               alignItems="center"
               sx={{
-                marginRight: { xs: 0, sm: 0, md: 7 }
+                marginRight: { xs: 0, sm: 0, md: 7 },
+                marginLeft: { xs: 2 },
               }}
             >
               <Grid item>
@@ -85,7 +91,7 @@ const Header = () => {
               <Grid item >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style={{ width: "17.22px", height: "16.17px" }}>
                   <path
-                    fill="currentColor" s
+                    fill="currentColor"
                     d="M13.808 10.469L20.88 2h-1.676l-6.142 7.353L8.158 2H2.5l7.418 11.12L2.5 22h1.676l6.486-7.765L15.842 22H21.5zm-2.296 2.748l-.752-1.107L4.78 3.3h2.575l4.826 7.11l.751 1.107l6.273 9.242h-2.574z"
                   ></path>
                 </svg>
@@ -96,7 +102,6 @@ const Header = () => {
         </Grid>
       </Container>
     </AppBar>
-
   );
 };
 

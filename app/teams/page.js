@@ -23,14 +23,14 @@ const CardComponent = ({ card }) => {
     const isOdd = card.id % 2 !== 0;
 
     return (
-        <Card sx={{ width: '85%', marginBottom: '16px' ,marginLeft:"6%",marginRight:"5%",borderRadius:"47px",border:"1px solid #0087C0"}}>
+        <Card sx={{ width: {md:'85%'}, marginBottom: '16px' ,marginLeft:"6%",marginRight:"5%",borderRadius:"47px",border:"1px solid #0087C0"}}>
             <CardContent sx={{margin:"2%"}}>
                 <Grid container spacing={2}>
                     {isOdd ? (
                         <>
                             <Grid item xs={8}>
-                            <Typography sx={{width:"30%",marginTop:"8%",  fontSize: "20px", fontFamily: "Poppins", fontWeight: 500, color: "#494949", lineHeight: "24px" }}>{card.title}</Typography>
-                                <Typography sx={{marginTop:"8%",  fontSize: "14px", fontFamily: "Poppins", fontWeight: 300, color: "#494949", lineHeight: "22px" }}>{card.text}</Typography>
+                            <Typography sx={{width:{md:"30%"},marginTop:"8%",  fontSize: "20px", fontFamily: "Poppins", fontWeight: 500, color: "#494949", lineHeight: "24px" }}>{card.title}</Typography>
+                                <Typography sx={{marginTop:"8%",  fontSize: {md:"14px",xs:"10px"}, fontFamily: "Poppins", fontWeight: 300, color: "#494949", lineHeight: "22px" }}>{card.text}</Typography>
                             </Grid>
                             <Grid item xs={4}>
                                 <CardMedia
@@ -52,8 +52,8 @@ const CardComponent = ({ card }) => {
                                 />
                             </Grid>
                             <Grid item xs={8}>
-                            <Typography sx={{width:"30%",marginTop:"8%",  fontSize: "20px", fontFamily: "Poppins", fontWeight: 500, color: "#494949", lineHeight: "24px" }}>{card.title}</Typography>
-                                <Typography sx={{marginTop:"8%",  fontSize: "14px", fontFamily: "Poppins", fontWeight: 300, color: "#494949", lineHeight: "22px" }}>{card.text}</Typography>
+                            <Typography sx={{width:{md:"30%"},marginTop:"8%",  fontSize: "20px", fontFamily: "Poppins", fontWeight: 500, color: "#494949", lineHeight: "24px" }}>{card.title}</Typography>
+                                <Typography sx={{marginTop:"8%",  fontSize: {md:"14px",xs:"10px"}, fontFamily: "Poppins", fontWeight: 300, color: "#494949", lineHeight: "22px" }}>{card.text}</Typography>
                             </Grid>
                         </>
                     )}
